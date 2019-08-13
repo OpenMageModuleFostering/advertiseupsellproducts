@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- Define module and version number-->
+    <modules>
+        <Advertise_UpsellProducts>
+            <version>1.0.0</version>
+        </Advertise_UpsellProducts>
+    </modules>
+
+    <!-- Default values for Module Configuration -->
+    <default>
+        <advertise_upsellproducts_options>
+            <advertise_upsell_products>
+                <advertise_prod_count>4</advertise_prod_count>
+                <advertise_upsell_text>Upsell Products</advertise_upsell_text>
+            </advertise_upsell_products>
+        </advertise_upsellproducts_options>
+    </default>
+
+    <admin>
+        <routers>
+            <upsellproducts>
+                <use>admin</use>
+                <args>
+                    <module>Advertise_UpsellProducts</module>
+                    <frontName>advertise_upsell</frontName>
+                </args>
+            </upsellproducts>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <!-- Add Advertise settings section to ACL -->
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <!-- Specific to this Adverti.se module -->
+                                        <advertise_upsellproducts_options>
+                                            <title>Adverti.se Upsell Products Module Section</title>
+                                            <sort_order>4</sort_order>
+                                        </advertise_upsellproducts_options>
+
+                                        <!-- These two are for the general Adverti.se settings & license -->
+                                        <advertise_settings translate="title">
+                                            <title>Advertise Section</title>
+                                            <sort_order>1</sort_order>
+                                        </advertise_settings>
+                                        <advertise translate="title">
+                                            <title>Advertise</title>
+                                            <sort_order>2</sort_order>
+                                        </advertise>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+    <global>
+        <!-- Define setup resources to run on install e.g. run SQL and data scripts -->
+        <resources>
+            <upsellproducts_setup>
+                <setup>
+                    <module>Advertise_UpsellProducts</module>
+                    <class>Advertise_UpsellProducts_Model_Resource_Setup</class>
+                </setup>
+            </upsellproducts_setup>
+        </resources>
+
+        <!-- Redirect calls to core Mage_Catalog_Block_Product_List_Upsell with Advertise upsell product list -->
+        <blocks>
+            <catalog>
+                <rewrite>
+                    <product_list_upsell>Advertise_UpsellProducts_Block_Upsell</product_list_upsell>
+                </rewrite>
+            </catalog>
+        </blocks>
+
+        <!-- Set Helper class -->
+        <helpers>
+            <advertise_upsellproducts>
+                <class>Advertise_UpsellProducts_Helper</class>
+            </advertise_upsellproducts>
+        </helpers>
+
+        <!-- Set necessary Models -->
+        <models>
+            <upsellproducts>
+                <class>Advertise_UpsellProducts_Model</class>
+            </upsellproducts>
+        </models>
+    </global>
+
+    <frontend>
+        <routers>
+            <!-- the <upsellproducts> tagname appears to be arbitrary, but by
+            convention is should match the frontName tag below-->
+            <upsellproducts>
+                <use>standard</use>
+                <args>
+                    <module>Advertise_UpsellProducts</module>
+                    <frontName>upsellproducts</frontName>
+                </args>
+            </upsellproducts>
+        </routers>
+
+        <!-- Add to default page layout -->
+        <layout>
+             <updates>
+                  <upsellproducts>
+                        <file>advertiseupsellproducts.xml</file>
+                  </upsellproducts>
+             </updates>
+        </layout>
+
+    </frontend>
+
+</config>
+
