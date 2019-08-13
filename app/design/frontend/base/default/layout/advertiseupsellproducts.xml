@@ -13,7 +13,7 @@
             <!-- Adverti.se JavaScript for upsell products -->
             <block type="core/text" name="adverti.se.retailintelligence.js">
                 <action method="setText">
-                    <text><![CDATA[<script type="text/javascript" src="http://retail.adverti.se/js/retailintelligence-1_0_0.js"></script>]]></text>
+                    <text><![CDATA[<script type="text/javascript" src="http://retail.adverti.se/js/retailintelligence-1_0_1.js"></script>]]></text>
                 </action>
             </block>
 
