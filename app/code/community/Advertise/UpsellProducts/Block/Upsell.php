@@ -32,7 +32,7 @@ class Advertise_UpsellProducts_Block_Upsell extends Mage_Catalog_Block_Product_L
         array_push($ids, '0');
 
         // Get count of upsell products required
-        $upsellCount = Mage::getStoreConfig('advertise_upsellproducts_options/advertise_upsell_products/advertise_prod_count');
+        $upsellCount = Mage::getStoreConfig('advertise_suggestedproducts_options/advertise_suggested_products/advertise_upsell_prod_count');
 
         // Get collection of products
         $upsells = Mage::getResourceModel('catalog/product_collection');

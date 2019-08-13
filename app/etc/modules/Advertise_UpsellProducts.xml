@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 /**
  * @category   Advertise
  * @package    Advertise_UpsellProducts
  */
 -->
-
 <config>
      <modules>
         <Advertise_UpsellProducts>
             <active>true</active>
             <codePool>community</codePool>
-            <version>1.0.0</version>
+            <version>1.2.0</version>
         </Advertise_UpsellProducts>
      </modules>
 </config>

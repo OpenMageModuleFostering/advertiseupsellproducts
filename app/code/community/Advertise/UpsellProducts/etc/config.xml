@@ -3,18 +3,17 @@
     <!-- Define module and version number-->
     <modules>
         <Advertise_UpsellProducts>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </Advertise_UpsellProducts>
     </modules>
 
     <!-- Default values for Module Configuration -->
     <default>
-        <advertise_upsellproducts_options>
-            <advertise_upsell_products>
-                <advertise_prod_count>4</advertise_prod_count>
-                <advertise_upsell_text>Upsell Products</advertise_upsell_text>
-            </advertise_upsell_products>
-        </advertise_upsellproducts_options>
+        <advertise_suggestedproducts_options>
+            <advertise_suggested_products>
+                <advertise_upsell_prod_count>4</advertise_upsell_prod_count>
+            </advertise_suggested_products>
+        </advertise_suggestedproducts_options>
     </default>
 
     <admin>
@@ -39,21 +38,12 @@
                             <children>
                                 <config>
                                     <children>
-                                        <!-- Specific to this Adverti.se module -->
-                                        <advertise_upsellproducts_options>
-                                            <title>Adverti.se Upsell Products Module Section</title>
-                                            <sort_order>4</sort_order>
-                                        </advertise_upsellproducts_options>
+                                        <!-- Specific to this Adverti.se module (others in Community package are added there) -->
+                                        <advertise_suggestedproducts_options>
+                                            <title>Adverti.se Suggested Products Module Section</title>
+                                            <sort_order>6</sort_order>
+                                        </advertise_suggestedproducts_options>
 
-                                        <!-- These two are for the general Adverti.se settings & license -->
-                                        <advertise_settings translate="title">
-                                            <title>Advertise Section</title>
-                                            <sort_order>1</sort_order>
-                                        </advertise_settings>
-                                        <advertise translate="title">
-                                            <title>Advertise</title>
-                                            <sort_order>2</sort_order>
-                                        </advertise>
                                     </children>
                                 </config>
                             </children>
@@ -122,6 +112,4 @@
         </layout>
 
     </frontend>
-
 </config>
-

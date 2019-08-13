@@ -10,8 +10,7 @@ class Advertise_UpsellProducts_Model_Config extends Varien_Object
      * Config keys
      */
     //const ENABLED  =         'importer/importer_group/enabled';
-    const PRODUCT_COUNT =    'advertise_upsellproducts_options/advertise_upsell_products/advertise_prod_count';
-    const UPSELL_HEADING  =  'advertise_upsellproducts_options/advertise_upsell_products/advertise_upsell_text';
+    const PRODUCT_COUNT =    'advertise_suggestedproducts_options/advertise_suggested_products/advertise_upsell_prod_count';
     const ADVERTISE_EMAIL =  'advertise_settings/settings/settings_email';
 
     /**
