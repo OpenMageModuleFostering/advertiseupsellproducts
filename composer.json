@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/AdvertiseUpsellProducts",
+    "name": "OpenMageModuleFostering\/AdvertiseUpsellProducts",
     "type": "magento-module",
     "license": "OSL",
     "homepage": "",
     "description": "Adverti.se Upsell Products for Magento - Dynamically Updated and Individually Personalised Upsell Products",
     "authors": [
-    {
-        "name": "Michael",
-        "email": "mike@adverti.se"
-    }
-],
+        {
+            "name": "Michael",
+            "email": "mike@adverti.se"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
